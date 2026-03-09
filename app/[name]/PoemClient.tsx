@@ -88,7 +88,7 @@ export default function PoemClient({ name, poem, secretMessage }: Props) {
     () => [
       `${displayName}-д зориулсан шүлэг бичигдэж байна...`,
       "Ангийн хөвгүүд ярилцаж байна...",
-      "Үгсийг зохиож байна...",
+      "Шүлгийг зохиож байна...",
       "Бараг бэлэн боллоо...",
     ],
     [displayName]
