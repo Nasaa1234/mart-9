@@ -86,8 +86,8 @@ export default function PoemClient({ name, poem, secretMessage }: Props) {
 
   const loadingMessages = useMemo(
     () => [
-      `${displayName}-д зориулсан шүлэг ачаалж байна...`,
-      "Одны тоос цуглуулж байна...",
+      `${displayName}-д зориулсан шүлэг бичигдэж байна...`,
+      "Ангийн хөвгүүд ярилцаж байна...",
       "Үгсийг зохиож байна...",
       "Бараг бэлэн боллоо...",
     ],
@@ -220,7 +220,7 @@ export default function PoemClient({ name, poem, secretMessage }: Props) {
     setEnvelopeOpen(true);
     const audio = audioRef.current;
     if (audio) {
-      audio.play().then(() => setIsPlaying(true)).catch(() => {});
+      audio.play().then(() => setIsPlaying(true)).catch(() => { });
     }
     setTimeout(() => setPhase("poem"), 1500);
   }, [envelopeOpen]);
@@ -232,7 +232,7 @@ export default function PoemClient({ name, poem, secretMessage }: Props) {
       audio.pause();
       setIsPlaying(false);
     } else {
-      audio.play().then(() => setIsPlaying(true)).catch(() => {});
+      audio.play().then(() => setIsPlaying(true)).catch(() => { });
     }
   }, [isPlaying]);
 
